@@ -1,0 +1,109 @@
+
+Built on Jun  4 2013 17:12:38
+Config lost  RTC invalid  external reset/power failure
+
+04003660:                                                             20 f8 5e aa d5 a3 ff ff 31 36 43 45
+04003680: 42 37 36 39 41 36 46 41 45 32 33 33 31 45 43 41 33 35 30 43 42 42 30 37 39 31 34 33 93 2c 80 00
+040036a0: 01 02 ff ff
+Flojo App version 35COMMA WFW version 2c0200
+Boot time 0
+Time now  1370362358
+boot reason: 0
+AdditionalInfo: 000
+permanent_fabsate_read: 0 0 0
+fabState extFlash: 0x00
+no spi key
+Disabling Standby for 15 seconds.
+
+04003660:                                                             20 f8 5e aa d5 a3 ff ff 31 36 43 45
+04003680: 42 37 36 39 41 36 46 41 45 32 33 33 31 45 43 41 33 35 30 43 42 42 30 37 39 31 34 33 93 2c 80 00
+040036a0: 01 02 ff ff
+MAC address.....................20:f8:5e:aa:d5:a3.......PASS
+LCD driver communication test...........................PASS
+
+Scale (Fortune) processor communication test......v15...PASS
+> Batt:
+avgVolt = 0
+lastVolt = 0
+cnt = 0
+Batt: V = 5670 = 100%
+entering state: 0
+AppNormal up  doing nothing!
+user_list_readFromFlash returned 90000402
+User list read from flash contains 0 users
+Uid	Name		MinW	MaxW	Age	Gender	Height	BFat	Cov*10000	LstWt	LstWtTime	nvdsIndex
+90000001
+90000002
+90000003
+90000084
+90000086
+90000084
+90000086
+HI :)
+backlight: 100
+Batt:
+avgVolt = 0
+lastVolt = 0
+cnt = 0
+90000084
+90000086
+Batt: V = 5629 = 100%
+Waiting 1238ms
+V35
+Waiting 2985ms
+ResetSystem
+(framingerror)
+
+Built on Jun  4 2013 17:12:38
+Config lost  RTC invalid  external reset/power failure
+
+04003660:                                                             20 f8 5e aa d5 a3 ff ff 31 36 43 45
+04003680: 42 37 36 39 41 36 46 41 45 32 33 33 31 45 43 41 33 35 30 43 42 42 30 37 39 31 34 33 93 2c 80 00
+040036a0: 01 02 ff ff
+Flojo App version 35COMMA WFW version 2c0200
+Boot time 1370362363
+Time now  1370362363
+boot reason: 4  Soft reset by APP
+AdditionalInfo: 002
+permanent_fabsate_read: 0 0 0
+fabState extFlash: 0x00
+no spi key
+
+04003660:                                                             20 f8 5e aa d5 a3 ff ff 31 36 43 45
+04003680: 42 37 36 39 41 36 46 41 45 32 33 33 31 45 43 41 33 35 30 43 42 42 30 37 39 31 34 33 93 2c 80 00
+040036a0: 01 02 ff ff
+MAC address.....................20:f8:5e:aa:d5:a3.......PASS
+LCD driver communication test...........................PASS
+
+Scale (Fortune) processor communication test......v15...PASS
+permanent_fabsate_read: 0 0 0
+fabState extFlash: 0x00
+no spi key
+> Batt:
+avgVolt = 0
+lastVolt = 0
+cnt = 0
+Batt: V = 5684 = 100%
+entering state: 1
+AppNcm_Fsm state=0x0 event=0x0
+Network ID 4
+Creating a provisioning network named: Aria AAD5A3
+Calling GsnWdd_Connect
+user_list_readFromFlash returned 90000402
+User list read from flash contains 0 users
+AppNcm_ConnectCb status=00000000 (state=2)
+Uid	Name		MinW	MaxW	Age	Gender	Height	BFat	Cov*10000	LstWt	LstWtTime	nvdsIndex
+AppNcm_Fsm state=0x2 event=0x3
+SETUP ACTIVE
+AppSm_ProvStateProcess 0x11
+90000001
+90000002
+90000003
+90000084
+90000086
+90000084
+90000086
+DHCP server enabled: 1
+backlight: 100
+Prov server: 192.168.240.1COMMA port 80
+ROM FS CRC ok
