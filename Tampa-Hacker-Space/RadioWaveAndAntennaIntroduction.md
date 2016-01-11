@@ -6,7 +6,7 @@ Date: 1-2-2016
 - Electricity (blues)
 - Magnetism (red)
 - Electric field is perpendicular to the magnetic field
-- Don't require a medium
+- Doesn't require a medium
 - Measured as both particle and wave properties
 	- Electronic volts
 	- Hertz
