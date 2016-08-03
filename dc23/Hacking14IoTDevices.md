@@ -1,4 +1,4 @@
-Title: Cameras, Thermostats, and Home Automation Controllers
+# Cameras, Thermostats, and Home Automation Controllers
 Subtitle: Hacking 14 IoT Devices
 Time: Friday, Aug 7, 1200
 
@@ -26,7 +26,7 @@ Results:
 - Withings Baby Monitor: SSH part with fixed root, HTTP, tons of GPL code (not released), (mobile) GCM key exposed in app
 - Ecobee (generally secure): has serial port, HTTPS, no cert pinning, torx t6 -> use pins -> boots to root shell
 - Hive (generally secure): mix of HTTP/HTTPs, no cert pinning, (cloud) on device references to test instances, boot -> user root -> password <blank>
-- Honeywell Lyric (somewhat secure): runs web server during initial pairing, pairing w/ HTTP, not linux, (mobile) creds can show up in logs when crash, (cloud) uses static IPs 
+- Honeywell Lyric (somewhat secure): runs web server during initial pairing, pairing w/ HTTP, not linux, (mobile) creds can show up in logs when crash, (cloud) uses static IPs
 - Nest Thermostat (quite secure): Linux, can be rooted via usb, (Mobile) uses HTTPS, (cloud) weather uses HTTP not HTTPS, htvhacker (exploiteers) put out roots
 - Nest Protect (yet to be rooted/ secure right now): during pairing acts as open WiFi service (mess with this)
 - Control4 HC-250: No network controlls, default root passw, only decent if firewalled, filesystem stored in SD card, has webserv

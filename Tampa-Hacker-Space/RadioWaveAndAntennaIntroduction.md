@@ -1,4 +1,4 @@
-Title: Introduction to Antennas and Radio Waves
+#Introduction to Antennas and Radio Waves
 
 Date: 1-2-2016
 
@@ -60,4 +60,3 @@ Date: 1-2-2016
 #Links
 [AMSAT](http://www.amsat.org/)
 [DXZone](http://www.dxzone.com/)
-
