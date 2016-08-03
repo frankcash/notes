@@ -1,8 +1,8 @@
-Title: Honeypots For Active Defense
+# Honeypots For Active Defense
 
 By: Greg Foss
 
-# Notes
+## Notes
 - Makes sure to include warning on your systems that you can "return fire"
 - Use a passive honeypot to build information on attacker
 - "[Artillery](https://github.com/BinaryDefense/artillery)"

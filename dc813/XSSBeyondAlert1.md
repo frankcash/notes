@@ -14,5 +14,3 @@ https://pentesterlab.com has pwnable ISOs
 XSS Tunnel, XSS Shell -> github.com/portcullislabs/xssshell-xsstunnell
 
 xss-payloads.com
-
-

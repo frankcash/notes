@@ -5,20 +5,20 @@ Time: Friday, Aug 7, 1200
 (Initial testing was in November 2014)
 
 
-Over View of Testing
+## Over View of Testing
 - Goals: Figure out what we want to get out
 - "What is someone likely to do to make us look bad" generally wont care about security after that
 - Three diff ways for IoT: Physical, local network (can mean BLE or LAN), remote
 - Physical < LAN < Remote
 - Hardware ? PC Apps? Mobile Apps? Cloud Components? - Don't limit yourself
 
-Techniques
+## Techniques
 - Hardware: expensive equip. not needed (multimeter, serial cable, etc)
 - PC Apps: monitor communications (mitm?), determine how trust is established, check for poor development practices
 - Mobile Apps: monitor (MITM?), decompile app, determine trust, general bad app dev practices
 - Cloud Comms: Auth, general security, initial registration
 
-Results:
+## Results:
 - DLink DCS-2132L: Custom cleartext UDP, uses plain HTTP, (pc) backups contain cleartext passwords, (pc) auto updates from plain HTTP
 - DropCam Pro (generally secure): exposed serial port, built on top Ambarella dev kit
 - FOSCAM FI9826W (history of vults): Plaintext by default (port 88), backs encrypted to static key, (Mobile) hardcoded API keys, data written to SD instead of cloud

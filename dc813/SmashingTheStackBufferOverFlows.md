@@ -1,10 +1,10 @@
-Title: Smashing the Stack Old School!
+# Smashing the Stack Old School!
 Date: August 19, 2015
 
 Nehalem: https://en.wikipedia.org/wiki/Nehalem_%28microarchitecture%29
 
 Pre-Nehalem:
--No randomization 
+-No randomization
 
 Idea: pour in more bytes, then manipulate return address to point to shell code (controlled crash)
 
