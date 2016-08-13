@@ -1,4 +1,3 @@
-i
 # Evil ESP
 
 By: Matt Trimble & Eric Escobar
