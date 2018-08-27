@@ -146,6 +146,36 @@ fmt.Println(evaluation.GetSummary(confusionMat))
 
 ```
 
+#### Exercise 3 Solution
+
+```
+
+irisData, err := base.ParseCSVToInstances("../data/iris.csv", true)
+if err != nil {
+    fmt.Println(err)
+}
+
+for i:= 2; i <10; i++{
+    fmt.Println(i)
+    knn := knn.NewKnnClassifier("euclidean", "linear", i)
+    // Use cross-fold validation to evaluate the kNN model
+    // on 5 folds of the data set.
+    cv, err := evaluation.GenerateCrossFoldValidationConfusionMatrices(irisData, knn, 5)
+    if err != nil {
+        fmt.Println(err)
+    }
+
+    // Get the mean, variance and standard deviation of the accuracy for the
+    // cross validation.
+    mean, variance := evaluation.GetCrossValidatedMetric(cv, evaluation.GetAccuracy)
+    stdev := math.Sqrt(variance)
+
+    // Output the cross metrics to standard out.
+    fmt.Printf("\n\nkNN Accuracy:\n%.2f (+/- %.2f)\n\n", mean, stdev*2)
+
+}
+```
+
 ## Building full ML workflow (Lab)
 
 ## Concluding Remarks
