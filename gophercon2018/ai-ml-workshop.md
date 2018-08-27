@@ -2,6 +2,7 @@
 
 Gophercon 2018
 
+August 27, 2018
 
 ##  ML and the ML Workflow
 [ML and the ML Workflow](https://github.com/ardanlabs/training-ai/tree/master/machine-learning-with-go/ml_intro)
@@ -58,6 +59,92 @@ Validation set should be similar percentage of labels as you're expecting in rea
 ## ML with Go
 
 [Gophernote](https://github.com/gopherdata/gophernotes)
+[Gonum](https://github.com/gonum/gonum)
+[Gota](https://github.com/kniren/gota)
+
+Reading a CSV with Go using stdlib:
+
+```go
+import (
+    "os"
+    "fmt"
+    "encoding/csv"
+    "io/ioutil"
+)
+
+// Open the csv file at ../../data/5kings_battles_v1.csv.
+file, err := os.Open("../data/5kings_battles_v1.csv")
+if err != nil {
+    fmt.Println(err)
+}
+// Create a new CSV reader.
+reader := csv.NewReader(file)
+
+// Read in all the records via the CSV reader method ReadAll.
+records, err := reader.ReadAll()
+if err != nil {
+    fmt.Println(err)
+}
+
+// Close the file.
+file.Close()
+
+// Let's get a sense of what the records look like
+// by printing a few of them.
+for idx, record := range records {
+    // Examine the header row.
+    if idx == 0 {
+        fmt.Println("Header: ", record)
+    }else{
+        // Print a few of the actual records.
+        fmt.Printf("\nname: %s\nyear: %s\nattacker_king: %s\ndefender_king: %s\nattacker_1: %s\n", record[0], record[1], record[3], record[4], record[5])
+        if idx > 5 {
+            break
+        }
+    }
+}
+```
+
+It is important to profile the data before getting started on other things.
+
+Regression: using variable x to model the changes in variable y.
+
+Linear regression assumes data is in a bell curve. https://github.com/gonum/gonum/blob/73ea1e732937f96d723d31dc5263d214a275d204/stat/stat.go#L747
+
+Classification models will output labels to define something.
+
+[Go Learn](https://github.com/sjwhitworth/golearn)
+
+#### Iris KNN example
+```go
+rawData, err := base.ParseCSVToInstances("../data/iris.csv", true)
+if err != nil {
+	panic(err)
+}
+
+//Initialises a new KNN classifier
+cls := knn.NewKnnClassifier("euclidean", "linear", 3)
+
+
+//Do a training-test split
+trainData, testData := base.InstancesTrainTestSplit(rawData, 0.50)
+cls.Fit(trainData)
+
+//Calculates the Euclidean distance and returns the most popular label
+predictions, err := cls.Predict(testData)
+if err != nil {
+	panic(err)
+}
+fmt.Println(predictions)
+
+// Prints precision/recall metrics
+confusionMat, err := evaluation.GetConfusionMatrix(testData, predictions)
+if err != nil {
+	panic(fmt.Sprintf("Unable to get confusion matrix: %s", err.Error()))
+}
+fmt.Println(evaluation.GetSummary(confusionMat))
+
+```
 
 ## Building full ML workflow (Lab)
 
@@ -66,3 +153,5 @@ Validation set should be similar percentage of labels as you're expecting in rea
 ### Extra stuff to look into
 
 [Go / Fuzzy String Matching](https://github.com/schollz/closestmatch)
+
+[Gopherdata](http://gopherdata.io/)
