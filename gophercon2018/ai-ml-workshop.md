@@ -148,7 +148,7 @@ fmt.Println(evaluation.GetSummary(confusionMat))
 
 #### Exercise 3 Solution
 
-```
+```go
 
 irisData, err := base.ParseCSVToInstances("../data/iris.csv", true)
 if err != nil {
